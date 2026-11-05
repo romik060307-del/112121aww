@@ -1,0 +1,16 @@
+OHLI SOCIAL ANDROID CLIENT — PATCH 1.0.3
+
+Perbaikan yang diterapkan:
+1. Tombol Back Android tidak lagi menampilkan dialog "Keluar dari OHLI Social".
+   - Riwayat halaman WebView tetap dinavigasikan mundur terlebih dahulu.
+   - Untuk tampilan/tab SPA, aplikasi mencoba memilih tombol Beranda.
+   - Jika tombol Beranda tidak ditemukan, aplikasi membuka kembali URL awal OHLI.
+   - Di Beranda, tombol Back tidak menutup APK.
+2. Perbaikan izin kamera dan mikrofon WebRTC.
+   - Permintaan kamera/mikrofon diperiksa berdasarkan origin HTTPS halaman aktif atau URL awal OHLI.
+   - Izin runtime CAMERA dan RECORD_AUDIO diberikan ke WebView setelah disetujui Android.
+   - Permintaan media yang tidak dikenal atau berasal dari origin lain tetap ditolak.
+3. Menambahkan MODIFY_AUDIO_SETTINGS.
+4. Versi aplikasi dinaikkan menjadi 1.0.3 (versionCode 4).
+
+Alamat server OHLI tidak diubah. Data, login, dan fitur website tetap berasal dari server yang sudah dikonfigurasi.
